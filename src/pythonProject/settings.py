@@ -124,3 +124,7 @@ STATIC_URL = '/static/'
 #custom user model
 
 AUTH_USER_MODEL = 'userauth.customUser'
+
+LOGIN_REDICRECT_URL = '/accounts/profile/'
+LOGIN_URL = '/login'
+LOGOUT_URL = '/logout'
