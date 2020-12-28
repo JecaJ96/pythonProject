@@ -7,4 +7,4 @@ alphanumeric = RegexValidator(r'^[0-9a-zA-Z]*$', 'Only alphanumeric characters a
 
 class customUser(AbstractUser):
     employee_id = models.CharField(verbose_name=_('Employee ID'),max_length=50, blank=True, null=True, validators=[alphanumeric], unique = True)
-    #make this field readonly when user is active
+    
