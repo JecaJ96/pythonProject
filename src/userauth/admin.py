@@ -18,6 +18,9 @@ class CustomUserAdmin(UserAdmin):
             return self.readonly_fields + ('employee_id',)
         return self.readonly_fields
 
+    def response_change(self, request, obj):
+        print("Jelena1")
+ 
     list_display = ['pk', 'email', 'username', 'first_name', 'last_name', 'employee_id']
     add_fieldsets = UserAdmin.add_fieldsets + (
         (None, {'fields': ('email', 'first_name', 'last_name','employee_id','login_cnt',)}),

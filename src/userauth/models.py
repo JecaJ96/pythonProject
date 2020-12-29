@@ -7,6 +7,7 @@ from django.contrib.auth.signals import user_logged_in
 alphanumeric = RegexValidator(r'^[0-9a-zA-Z]*$', 'Only alphanumeric characters are allowed.')
 
 class customUser(AbstractUser):
+    change_form_template = "entities/villain_changeform.html"
     employee_id = models.CharField(verbose_name=_('Employee ID'),max_length=50, blank=True, null=True, validators=[alphanumeric], unique = True)
     login_cnt = models.IntegerField(verbose_name=_('Login count'), default=0, blank=True, null=True)
 
